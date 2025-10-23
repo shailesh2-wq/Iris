@@ -1,16 +1,224 @@
-# React + Vite
+# IRIS Student Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive student portal built with React and Vite, designed for NITK students to manage their academic information, track attendance, and access campus resources.
 
-Currently, two official plugins are available:
+![IRIS Portal](https://img.shields.io/badge/React-18.2.0-blue)
+![Vite](https://img.shields.io/badge/Vite-5.0.0-purple)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+### 📱 Responsive Design
+- **Mobile-first approach** with support for all screen sizes
+- **Adaptive layouts** for desktop, tablet, and mobile devices
+- **Touch-friendly interface** with optimized interactions
+- **Progressive enhancement** for better performance
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🎨 Modern UI/UX
+- **Glassmorphism design** with gradient backgrounds
+- **Smooth animations** and hover effects
+- **Dark theme** optimized for extended use
+- **Intuitive navigation** with hamburger menu for mobile
 
-## Expanding the ESLint configuration
+### ♿ Accessibility
+- **WCAG 2.1 compliant** with ARIA labels and roles
+- **Keyboard navigation** support
+- **Screen reader compatibility**
+- **High contrast** and readable typography
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📊 Dashboard Features
+- **Academic Statistics**: Credits, CGPA, and semester information
+- **Attendance Tracking**: Visual progress bars for course attendance
+- **Announcements**: Latest campus news and updates
+- **Quick Actions**: Easy access to timetable, fees, and other services
+- **Deadlines**: Upcoming assignment and exam dates
+
+### 🛡️ Robust Architecture
+- **Error handling** with user-friendly error messages
+- **Input validation** and form security
+- **Loading states** with smooth transitions
+- **Component-based** architecture for maintainability
+
+## 🛠️ Technology Stack
+
+- **Frontend**: React 18.2.0 with Hooks
+- **Build Tool**: Vite 5.0.0
+- **Styling**: CSS3 with Custom Properties
+- **Icons**: React Icons (Font Awesome)
+- **Development**: ESLint for code quality
+
+## 📦 Installation
+
+### Prerequisites
+- Node.js (version 16 or higher)
+- npm or yarn package manager
+
+### Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd iris
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open in browser**
+   Navigate to `http://localhost:5173` to view the application.
+
+## 🏗️ Project Structure
+
+```
+iris/
+├── public/                 # Static assets
+├── src/
+│   ├── components/        # React components
+│   │   ├── Navbar/        # Navigation component
+│   │   │   ├── Navbar.jsx
+│   │   │   └── Navbar.css
+│   │   └── Dashboard/     # Main dashboard
+│   │       ├── Dashboard.jsx
+│   │       └── Dashboard.css
+│   ├── assets/           # Images and icons
+│   ├── App.jsx           # Main app component
+│   ├── App.css           # Global styles
+│   ├── index.css         # Base styles
+│   └── main.jsx          # Application entry point
+├── package.json          # Dependencies and scripts
+├── vite.config.js        # Vite configuration
+└── README.md             # Project documentation
+```
+
+## 🎯 Key Components
+
+### Navbar Component
+- **Responsive navigation** with mobile hamburger menu
+- **Search functionality** with input validation
+- **User profile display** with avatar and information
+- **Keyboard navigation** support
+
+### Dashboard Component
+- **Academic statistics** cards with visual indicators
+- **Attendance tracking** with color-coded progress bars
+- **Announcements section** for campus updates
+- **Quick actions** for common tasks
+- **Deadlines tracker** with visual indicators
+
+## 🎨 Design System
+
+### Color Palette
+- **Primary**: `#706FEB` (Purple accent)
+- **Background**: `#121212` (Dark background)
+- **Surface**: `#1f1f1f` (Card backgrounds)
+- **Text**: `#ffffff` (Primary text)
+- **Muted**: `#bfbfbf` (Secondary text)
+
+### Typography
+- **Font Family**: Poppins (Google Fonts)
+- **Responsive sizing** with CSS custom properties
+- **Consistent spacing** using design tokens
+
+## 📱 Responsive Breakpoints
+
+- **Desktop**: 1200px and above
+- **Tablet**: 768px - 1199px
+- **Mobile**: 480px - 767px
+- **Small Mobile**: Below 480px
+
+## ♿ Accessibility Features
+
+- **ARIA labels** for all interactive elements
+- **Semantic HTML** structure
+- **Keyboard navigation** support
+- **Screen reader** compatibility
+- **Focus management** for mobile menu
+- **Color contrast** compliance
+
+## 🚀 Performance Optimizations
+
+- **CSS Custom Properties** for efficient theming
+- **Optimized animations** with hardware acceleration
+- **Lazy loading** for better initial load times
+- **Minimal bundle size** with Vite optimization
+
+## 🧪 Development
+
+### Available Scripts
+
+```bash
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Run linting
+npm run lint
+```
+
+### Code Quality
+- **ESLint** configuration for consistent code style
+- **Component documentation** with JSDoc comments
+- **Error handling** with try-catch blocks
+- **Input validation** for user inputs
+
+## 📈 Recent Updates
+
+### Version 1.0.0 Features
+- ✅ Responsive design implementation
+- ✅ Modern UI with glassmorphism effects
+- ✅ Accessibility compliance (WCAG 2.1)
+- ✅ Error handling and validation
+- ✅ Loading states and animations
+- ✅ Component documentation
+- ✅ CSS organization with custom properties
+- ✅ Code formatting and consistency
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Module Designers
+
+- **Akshay Revankar**
+- **Govind Jeevan**
+
+## 📞 Support
+
+For support and inquiries, contact:
+- **Email**: officers@iris.nitk.ac.in
+- **Website**: [NITK Website](https://www.nitk.ac.in)
+
+## 🙏 Acknowledgments
+
+- NITK (National Institute of Technology Karnataka)
+- React and Vite communities
+- Font Awesome for icons
+- Google Fonts for typography
+
+---
+
+**Built with ❤️ for NITK students**
