@@ -279,7 +279,7 @@ body {
 /* ---------- Middle Section ---------- */
 .middle-section {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   flex: 1;
   min-height: 380px;
   align-items: stretch;
@@ -297,7 +297,7 @@ body {
 
 /* ---------- Announcements ---------- */
 .announcements {
-  flex: 0.95;
+  flex: 1;
 }
 
 .box-header {
@@ -331,7 +331,7 @@ body {
 
 /* ---------- Attendance ---------- */
 .attendance {
-  flex: 1.05;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 12px;
