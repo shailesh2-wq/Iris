@@ -457,3 +457,68 @@ body {
   }
 
 }
+
+/* Enhanced responsive design for better mobile experience */
+@media (max-width: 480px) {
+  .top-cards > div {
+    width: 98%;
+    padding: 12px;
+  }
+  
+  .card h3 {
+    font-size: 1.4rem;
+  }
+  
+  .card p {
+    font-size: 0.85rem;
+  }
+  
+  .announcements-box,
+  .attendance-box,
+  .quick-actions,
+  .upcoming-deadlines {
+    width: 98%;
+    padding: 15px;
+  }
+  
+  .box h4 {
+    font-size: 1rem;
+  }
+  
+  .attendance-item {
+    padding: 8px 0;
+  }
+  
+  .att-title {
+    font-size: 0.9rem;
+  }
+  
+  .progress {
+    height: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .top-cards > div {
+    padding: 10px;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .card p {
+    font-size: 0.8rem;
+  }
+  
+  .announcements-box,
+  .attendance-box,
+  .quick-actions,
+  .upcoming-deadlines {
+    padding: 12px;
+  }
+  
+  .box h4 {
+    font-size: 0.9rem;
+  }
+}
