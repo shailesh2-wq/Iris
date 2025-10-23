@@ -8,21 +8,40 @@ import ed1 from "../../assets/assests/ed1.png";
 import bul from "../../assets/assests/building.png";
 import ear from "../../assets/assests/world.png";
 
+/**
+ * Navbar Component
+ * 
+ * A responsive navigation bar component for the IRIS student portal.
+ * Features include:
+ * - Responsive design with mobile hamburger menu
+ * - Search functionality
+ * - User profile display
+ * - Accessibility support with ARIA labels
+ * - Smooth animations and hover effects
+ * 
+ * @component
+ * @returns {JSX.Element} The rendered Navbar component
+ */
 const Navbar = () => {
+  // State for managing mobile menu visibility
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  /**
+   * Toggles the mobile menu visibility
+   * Updates the state to show/hide the mobile navigation menu
+   */
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
     <nav className="navbar">
-      {/* Left Logo */}
+      {/* Logo Section - Left side of navbar */}
       <div className="navbar-left">
-        <img src={logo} alt="Logo" className="logo" />
+        <img src={logo} alt="IRIS Logo" className="logo" />
       </div>
 
-      {/* Mobile Menu Button */}
+      {/* Mobile Menu Toggle Button - Only visible on mobile devices */}
       <button 
         className="mobile-menu-btn" 
         onClick={toggleMobileMenu}
@@ -33,7 +52,7 @@ const Navbar = () => {
         {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
       </button>
 
-      {/* Center Menu + Search */}
+      {/* Main Navigation Menu - Center section with menu items and search */}
       <div 
         className={`navbar-center ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}
         id="mobile-menu"

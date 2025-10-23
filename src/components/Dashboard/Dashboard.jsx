@@ -11,15 +11,32 @@ import da26 from "../../assets/assests/da26.png";
 import edu from "../../assets/assests/education.png";
 import maj from "../../assets/assests/major.png";
 import sem from "../../assets/assests/semester.png";
-// import fees from "../../assests/spare.png";
 
 /**
- * Drop this component into src/ (or your components folder).
- * Make sure Dashboard.css is in the same folder or adjust the import path.
- *
- * Run: npm i react-icons
+ * Dashboard Component
+ * 
+ * Main dashboard component for the IRIS student portal displaying:
+ * - Academic statistics (credits, CGPA, semester)
+ * - Recent announcements
+ * - Course attendance tracking with progress bars
+ * - Quick action buttons for common tasks
+ * - Upcoming deadlines and important dates
+ * 
+ * Features:
+ * - Responsive design for all screen sizes
+ * - Accessibility support with ARIA labels
+ * - Animated progress bars for attendance
+ * - Organized layout with sidebar navigation
+ * 
+ * @component
+ * @returns {JSX.Element} The rendered Dashboard component
  */
 
+/**
+ * Sample attendance data for courses
+ * In a real application, this would come from an API or state management
+ * @type {Array<{title: string, pct: number, color: string}>}
+ */
 const attendanceData = [
   { title: "Data Structures & Algorithms (CS201)", pct: 85, color: "green" },
   { title: "Object Oriented Programming (CS202)", pct: 71, color: "red" },
@@ -28,10 +45,16 @@ const attendanceData = [
   { title: "Web Programming (CS204)", pct: 90, color: "green" }
 ];
 
+/**
+ * Main Dashboard component
+ * Handles the layout and rendering of all dashboard sections
+ */
 export default function Dashboard() {
-  // optional: animate widths after mount by adding a class
+  /**
+   * Effect hook to add animation class after component mounts
+   * This triggers CSS transitions for progress bars and other animated elements
+   */
   useEffect(() => {
-    // add `loaded` class to body or root element to trigger css transition
     const el = document.querySelector(".main-content");
     if (el) el.classList.add("loaded");
   }, []);
