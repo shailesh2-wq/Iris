@@ -1,0 +1,281 @@
+/* ========== Navbar Base ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #232222;
+  color: #fff;
+  padding: 8px 20px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+/* ========== Logo Section ========== */
+.logo {
+  height: 35px;
+  width: auto;
+  border-radius: 6px;
+}
+
+/* ========== Center Section ========== */
+.navbar-center {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-center ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 50px; /* space between menu items */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-center ul li {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* space between icon and text */
+  font-size: 15px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+/* ========== Search Box beside Alumni ========== */
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  padding: 4px 10px;
+  margin-left: 80px; /* ✅ small gap from Alumni */
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  width: 120px;
+}
+
+.search-icon {
+  color: #b0b0b0;
+  font-size: 14px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+/* ========== Right Section (User Info) ========== */
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info {
+  text-align: right;
+  line-height: 1.2;
+}
+
+.user-name {
+  font-weight: 500;
+  margin: 0;
+  font-size: 15px;
+}
+
+.user-id {
+  margin: 0;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.user-avatar {
+  background-color: #1f1f1f;
+  color: #fff;
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========== Mobile Menu Button ========== */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* ========== Responsive Design ========== */
+
+/* Tablet and Medium Desktop (below 1337px) */
+@media (max-width: 1337px) {
+  .navbar-center ul {
+    gap: 0px; /* Reduce gap between menu items */
+  }
+  
+  .search-box {
+    margin-left: 40px; /* Reduce margin from Alumni */
+  }
+  
+  .search-box input {
+    width: 100px; /* Reduce search input width */
+  }
+}
+
+/* Tablet (below 1024px) */
+@media (max-width: 1024px) {
+  .navbar-center ul {
+    gap: 20px; /* Further reduce gap */
+  }
+  
+  .search-box {
+    margin-left: 20px;
+  }
+  
+  .search-box input {
+    width: 80px;
+  }
+  
+  .user-info {
+    display: none; /* Hide user info text on smaller tablets */
+  }
+}
+
+/* Mobile and Small Tablet (below 768px) */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .navbar-center {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #232222;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .navbar-center.mobile-menu-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .navbar-menu {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  .navbar-menu li {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+  }
+  
+  .search-box {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .search-box input {
+    width: 200px;
+  }
+  
+  .user-section {
+    gap: 5px;
+  }
+  
+  .user-avatar {
+    padding: 6px;
+  }
+}
+
+/* Small Mobile (below 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 15px;
+  }
+  
+  .logo {
+    height: 30px;
+  }
+  
+  .search-box input {
+    width: 150px;
+  }
+}
+
+/* ========== Mobile Quick Actions ========== */
+.mobile-quick-actions {
+  display: none;
+  padding: 20px;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+}
+
+.mobile-quick-actions h4 {
+  color: #fff;
+  font-size: 16px;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.quick-action-btn {
+  background: #1f1f1f;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #fff;
+}
+
+.quick-action-btn:hover {
+  background: rgba(112, 111, 235, 0.12);
+  transform: translateY(-2px);
+}
+
+.quick-action-btn img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.quick-action-btn span {
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Show mobile quick actions on mobile screens */
+@media (max-width: 768px) {
+  .mobile-quick-actions {
+    display: block;
+  }
+}
