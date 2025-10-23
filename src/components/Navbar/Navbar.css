@@ -3,11 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #232222;
+  background: linear-gradient(135deg, #232222 0%, #2a2a2a 100%);
   color: #fff;
   padding: 8px 20px;
   font-family: "Poppins", sans-serif;
   position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 /* ========== Logo Section ========== */
@@ -39,16 +41,32 @@
   font-size: 15px;
   color: #ccc;
   cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.navbar-center ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transform: translateY(-1px);
 }
 
 /* ========== Search Box beside Alumni ========== */
 .search-box {
   display: flex;
   align-items: center;
-  background-color: #2a2a2a;
-  border-radius: 8px;
-  padding: 4px 10px;
+  background: linear-gradient(135deg, #2a2a2a 0%, #333 100%);
+  border-radius: 12px;
+  padding: 6px 12px;
   margin-left: 80px; /* ✅ small gap from Alumni */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-box:focus-within {
+  border-color: #706FEB;
+  box-shadow: 0 0 0 2px rgba(112, 111, 235, 0.2);
 }
 
 .search-box input {

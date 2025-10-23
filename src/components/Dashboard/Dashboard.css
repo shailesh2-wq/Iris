@@ -6,6 +6,10 @@
   --sidebar: #181818;
   --accent: #706FEB;
   --muted: #bfbfbf;
+  --gradient-primary: linear-gradient(135deg, #706FEB 0%, #8B5CF6 100%);
+  --gradient-secondary: linear-gradient(135deg, #1f1f1f 0%, #2a2a2a 100%);
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
 * {
@@ -28,12 +32,14 @@ body {
 /* ---------- Sidebar ---------- */
 .sidebar {
   width: 230px;
-  background: var(--sidebar);
+  background: var(--gradient-secondary);
   padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 18px;
+  box-shadow: var(--shadow-soft);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo {
@@ -104,12 +110,19 @@ body {
 }
 
 .card {
-  background: var(--panel);
+  background: var(--gradient-secondary);
   padding: 22px;
-  border-radius: 12px;
+  border-radius: 16px;
   width: 160px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
 }
 
 .card h3 {
