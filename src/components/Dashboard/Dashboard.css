@@ -194,6 +194,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* ---------- Top Cards ---------- */
@@ -203,7 +206,8 @@ body {
   align-items: stretch;
   gap: 20px;
   margin-bottom: 10px;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
 }
 
 .card {
@@ -285,7 +289,8 @@ body {
   flex: 1;
   min-height: 380px;
   align-items: stretch;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
 }
 
 /* ---------- Generic Boxes ---------- */
@@ -527,10 +532,16 @@ body {
   }
 
   /* --- FIX MAIN CONTENT/NAVBAR WIDTH --- */
-  .navbar,
-  .main-content {
+  .navbar {
     width: 100% !important;
     margin: 0;
+  }
+  
+  .main-content {
+    width: 100% !important;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: center;
   }
 
   /* --- FIX 1: TOP 3 CARDS (YOUR REQUEST) --- */
@@ -539,6 +550,7 @@ body {
     flex-direction: column;  
     align-items: center;      
     width: 100%;
+    max-width: 100%;
     padding: 10px 0;
     gap: 5px; /* <-- THIS IS THE NEW LINE FOR UNIFORM SPACING */
   }
@@ -556,6 +568,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 100%;
     align-items: center; 
   }
   

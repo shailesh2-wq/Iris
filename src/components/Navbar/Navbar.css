@@ -64,8 +64,8 @@
   transform: translateY(-1px);
 }
 
-/* ========== Search Box beside Alumni ========== */
-.search-box {
+/* ========== Search Container beside Alumni ========== */
+.search-container {
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, #2a2a2a 0%, #333 100%);
@@ -76,25 +76,49 @@
   transition: all 0.3s ease;
 }
 
-.search-box:focus-within {
+.search-container:focus-within {
   border-color: var(--navbar-accent);
   box-shadow: 0 0 0 2px rgba(112, 111, 235, 0.2);
 }
 
-.search-box input {
+.search-input {
   background: transparent;
   border: none;
   outline: none;
   color: #fff;
   font-size: 14px;
   width: 120px;
+  margin-right: 8px;
+}
+
+.search-input::placeholder {
+  color: #b0b0b0;
+}
+
+.search-icon-btn {
+  background: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon-btn:hover {
+  background: #2a2a2a;
+  transform: translateY(-1px);
+}
+
+.search-icon-btn:active {
+  transform: translateY(0);
 }
 
 .search-icon {
   color: #b0b0b0;
   font-size: 14px;
-  margin-left: 6px;
-  cursor: pointer;
 }
 
 /* ========== Right Section (User Info) ========== */
@@ -150,11 +174,11 @@
     gap: 0px; /* Reduce gap between menu items */
   }
   
-  .search-box {
+  .search-container {
     margin-left: 40px; /* Reduce margin from Alumni */
   }
   
-  .search-box input {
+  .search-input {
     width: 100px; /* Reduce search input width */
   }
 }
@@ -165,11 +189,11 @@
     gap: 20px; /* Further reduce gap */
   }
   
-  .search-box {
+  .search-container {
     margin-left: 20px;
   }
   
-  .search-box input {
+  .search-input {
     width: 80px;
   }
   
@@ -216,14 +240,14 @@
     border-bottom: 1px solid #333;
   }
   
-  .search-box {
+  .search-container {
     margin-left: 0;
     margin-top: 10px;
     width: 100%;
     justify-content: center;
   }
   
-  .search-box input {
+  .search-input {
     width: 200px;
   }
   
@@ -246,7 +270,7 @@
     height: 30px;
   }
   
-  .search-box input {
+  .search-input {
     width: 150px;
   }
   
@@ -270,7 +294,7 @@
     height: 25px;
   }
   
-  .search-box input {
+  .search-input {
     width: 120px;
   }
   

@@ -115,7 +115,7 @@ const Navbar = () => {
             <img src={ear} alt="Alumni icon" className="avatar-img" />
             Alumni ▾
           </li>
-          <form className="search-box" role="search" onSubmit={handleSearchSubmit}>
+          <div className="search-container">
             <input 
               type="text" 
               placeholder="Search..." 
@@ -124,11 +124,12 @@ const Navbar = () => {
               value={searchQuery}
               onChange={handleSearchChange}
               maxLength={100}
+              className="search-input"
             />
-            <button type="submit" aria-label="Submit search">
+            <button className="search-icon-btn" aria-label="Search" onClick={handleSearchSubmit}>
               <FaSearch className="search-icon" aria-hidden="true" />
             </button>
-          </form>
+          </div>
         </ul>
       </div>
 
