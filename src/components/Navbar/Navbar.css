@@ -1,14 +1,26 @@
+/* ========== CSS Variables ========== */
+:root {
+  --navbar-bg: linear-gradient(135deg, #232222 0%, #2a2a2a 100%);
+  --navbar-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --navbar-text: #fff;
+  --navbar-text-muted: #ccc;
+  --navbar-hover-bg: rgba(255, 255, 255, 0.1);
+  --navbar-accent: #706FEB;
+  --navbar-border-radius: 6px;
+  --navbar-transition: all 0.3s ease;
+}
+
 /* ========== Navbar Base ========== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #232222 0%, #2a2a2a 100%);
-  color: #fff;
+  background: var(--navbar-bg);
+  color: var(--navbar-text);
   padding: 8px 20px;
   font-family: "Poppins", sans-serif;
   position: relative;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--navbar-shadow);
   backdrop-filter: blur(10px);
 }
 
@@ -37,18 +49,18 @@
 .navbar-center ul li {
   display: flex;
   align-items: center;
-  gap: 6px; /* space between icon and text */
+  gap: 6px;
   font-size: 15px;
-  color: #ccc;
+  color: var(--navbar-text-muted);
   cursor: pointer;
   padding: 8px 12px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  border-radius: var(--navbar-border-radius);
+  transition: var(--navbar-transition);
 }
 
 .navbar-center ul li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background-color: var(--navbar-hover-bg);
+  color: var(--navbar-text);
   transform: translateY(-1px);
 }
 
@@ -65,7 +77,7 @@
 }
 
 .search-box:focus-within {
-  border-color: #706FEB;
+  border-color: var(--navbar-accent);
   box-shadow: 0 0 0 2px rgba(112, 111, 235, 0.2);
 }
 
