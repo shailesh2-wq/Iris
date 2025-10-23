@@ -37,59 +37,59 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="dashboard">
-      <aside className="sidebar">
+    <div className="dashboard" role="main" aria-label="Student dashboard">
+      <aside className="sidebar" role="complementary" aria-label="Navigation sidebar">
 
 
-        <div className="quick-links">
+        <nav className="quick-links" role="navigation" aria-label="Quick links">
           <h3>QUICK LINKS</h3>
-          <a href="#">About IRIS</a>
-          <a href="#">IRIS Blog</a>
-          <a href="#">NITK Website</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Login To Moodle</a>
-        </div>
+          <a href="#" aria-label="About IRIS">About IRIS</a>
+          <a href="#" aria-label="IRIS Blog">IRIS Blog</a>
+          <a href="#" aria-label="NITK Website">NITK Website</a>
+          <a href="#" aria-label="Terms of Service">Terms of Service</a>
+          <a href="#" aria-label="Login To Moodle">Login To Moodle</a>
+        </nav>
 
-        <div className="module-designers">
+        <div className="module-designers" role="region" aria-label="Module designers">
           <h3>MODULE DESIGNERS</h3>
-          <a href="#">Akshay Revankar</a>
-          <a href="#">Govind Jeevan</a>
+          <a href="#" aria-label="Akshay Revankar profile">Akshay Revankar</a>
+          <a href="#" aria-label="Govind Jeevan profile">Govind Jeevan</a>
         </div>
 
-        <div className="support">
+        <div className="support" role="region" aria-label="Support information">
           <h3>SUPPORT</h3>
-          <a href="mailto:officers@iris.nitk.ac.in">officers@iris.nitk.ac.in</a>
+          <a href="mailto:officers@iris.nitk.ac.in" aria-label="Email support">officers@iris.nitk.ac.in</a>
         </div>
 
-        <button className="logout">LOG OUT</button>
+        <button className="logout" aria-label="Log out of account">LOG OUT</button>
       </aside>
 
       <main className="main-content">
-       <div className="top-cards">
-  <div className="card card-inline">
-    <img src={edu} alt="credits" className="card-img" />
+       <section className="top-cards" aria-label="Academic statistics">
+  <div className="card card-inline" role="region" aria-label="Major credits">
+    <img src={edu} alt="Education icon" className="card-img" />
     <div className="card-text">
       <h3>44</h3>
       <p>Major Credits</p>
     </div>
   </div>
 
-  <div className="card card-inline">
-    <img src={maj} alt="cgpa" className="card-img" />
+  <div className="card card-inline" role="region" aria-label="Major CGPA">
+    <img src={maj} alt="Major icon" className="card-img" />
     <div className="card-text">
       <h3>8.1</h3>
       <p>Major CGPA</p>
     </div>
   </div>
 
-  <div className="card card-inline">
-    <img src={sem} alt="semester" className="card-img" />
+  <div className="card card-inline" role="region" aria-label="Current semester">
+    <img src={sem} alt="Semester icon" className="card-img" />
     <div className="card-text">
       <h3>3<sup>rd</sup></h3>
       <p>Semester</p>
     </div>
   </div>
-</div>
+</section>
         <div className="middle-section">
           {/* Announcements */}
           <div className="announcements box">
@@ -106,20 +106,23 @@ export default function Dashboard() {
           </div>
 
           {/* Attendance */}
-          <div className="attendance box">
+          <div className="attendance box" role="region" aria-label="Attendance tracking">
             <h4>Attendance</h4>
 
-            <div className="attendance-list">
+            <div className="attendance-list" role="list" aria-label="Course attendance list">
               {attendanceData.map((a, i) => (
-                <div className="attendance-item" key={i}>
-                  <p className="att-title">{a.title} <span className="att-pct">{a.pct}%</span></p>
+                <div className="attendance-item" key={i} role="listitem">
+                  <p className="att-title">
+                    {a.title} 
+                    <span className="att-pct" aria-label={`${a.pct} percent attendance`}>
+                      {a.pct}%
+                    </span>
+                  </p>
 
-                  <div className="progress">
-                    {/* progress-bar actual element with final width */}
+                  <div className="progress" role="progressbar" aria-valuenow={a.pct} aria-valuemin="0" aria-valuemax="100" aria-label={`${a.title} attendance: ${a.pct}%`}>
                     <div
                       className={`progress-bar ${a.color}`}
                       style={{ width: `${a.pct}%` }}
-                      aria-valuenow={a.pct}
                     />
                   </div>
                 </div>

@@ -23,34 +23,60 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Button */}
-      <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
+      <button 
+        className="mobile-menu-btn" 
+        onClick={toggleMobileMenu}
+        aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={isMobileMenuOpen}
+        aria-controls="mobile-menu"
+      >
         {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
       </button>
 
       {/* Center Menu + Search */}
-      <div className={`navbar-center ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
-        <ul className="navbar-menu">
-          <li><img src={img} alt="User" className="avatar-img" />Institute ▾</li>
-          <li><img src={ed1} alt="edpp" /> Academics ▾</li>
-          <li><img src={bul} alt="bulding" />Campus ▾</li>
-          <li>
-            <img src={ear} alt="earth" /> Alumni ▾
+      <div 
+        className={`navbar-center ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}
+        id="mobile-menu"
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        <ul className="navbar-menu" role="menubar">
+          <li role="menuitem" tabIndex="0">
+            <img src={img} alt="Institute icon" className="avatar-img" />
+            Institute ▾
+          </li>
+          <li role="menuitem" tabIndex="0">
+            <img src={ed1} alt="Academics icon" className="avatar-img" />
+            Academics ▾
+          </li>
+          <li role="menuitem" tabIndex="0">
+            <img src={bul} alt="Campus icon" className="avatar-img" />
+            Campus ▾
+          </li>
+          <li role="menuitem" tabIndex="0">
+            <img src={ear} alt="Alumni icon" className="avatar-img" />
+            Alumni ▾
           </li> 
-          <div className="search-box">
-            <input type="text" placeholder="" />
-            <FaSearch className="search-icon" />
+          <div className="search-box" role="search">
+            <input 
+              type="text" 
+              placeholder="Search..." 
+              aria-label="Search"
+              role="searchbox"
+            />
+            <FaSearch className="search-icon" aria-hidden="true" />
           </div>
         </ul>
       </div>
 
       {/* Right User Info */}
-      <div className="user-section">
+      <div className="user-section" role="region" aria-label="User information">
         <div className="user-info">
-          <p className="user-name">Shailesh</p>
-          <p className="user-id">241CV218</p>
+          <p className="user-name" aria-label="User name">Shailesh</p>
+          <p className="user-id" aria-label="User ID">241CV218</p>
         </div>
-        <div className="user-avatar">
-         <img src={userImage} alt="User" className="avatar-img" />
+        <div className="user-avatar" role="img" aria-label="User avatar">
+         <img src={userImage} alt="Shailesh's profile picture" className="avatar-img" />
         </div>
       </div>
     </nav>
