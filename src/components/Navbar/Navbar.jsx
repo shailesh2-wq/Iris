@@ -75,73 +75,71 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-container">
-        {/* Logo Section - Left side of navbar */}
-        <div className="navbar-left">
-          <img src={logo} alt="IRIS Logo" className="logo" />
+      {/* Logo Section - Left side of navbar */}
+      <div className="navbar-left">
+        <img src={logo} alt="IRIS Logo" className="logo" />
+      </div>
+
+      {/* Mobile Menu Toggle Button - Only visible on mobile devices */}
+      <button 
+        className="mobile-menu-btn" 
+        onClick={toggleMobileMenu}
+        aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={isMobileMenuOpen}
+        aria-controls="mobile-menu"
+      >
+        {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      {/* Main Navigation Menu - Center section with menu items and search */}
+      <div 
+        className={`navbar-center ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}
+        id="mobile-menu"
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        <ul className="navbar-menu" role="menubar">
+          <li role="menuitem" tabIndex={0} onKeyDown={handleKeyDown}>
+            <img src={img} alt="Institute icon" className="avatar-img" />
+            Institute ▾
+          </li>
+          <li role="menuitem" tabIndex={0} onKeyDown={handleKeyDown}>
+            <img src={ed1} alt="Academics icon" className="avatar-img" />
+            Academics ▾
+          </li>
+          <li role="menuitem" tabIndex={0} onKeyDown={handleKeyDown}>
+            <img src={bul} alt="Campus icon" className="avatar-img" />
+            Campus ▾
+          </li>
+          <li role="menuitem" tabIndex={0} onKeyDown={handleKeyDown}>
+            <img src={ear} alt="Alumni icon" className="avatar-img" />
+            Alumni ▾
+          </li>
+          <form className="search-box" role="search" onSubmit={handleSearchSubmit}>
+            <input 
+              type="text" 
+              placeholder="Search..." 
+              aria-label="Search"
+              role="searchbox"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              maxLength={100}
+            />
+            <button type="submit" aria-label="Submit search">
+              <FaSearch className="search-icon" aria-hidden="true" />
+            </button>
+          </form>
+        </ul>
+      </div>
+
+      {/* Right User Info */}
+      <div className="user-section" role="region" aria-label="User information">
+        <div className="user-info">
+          <p className="user-name" aria-label="User name">Shailesh</p>
+          <p className="user-id" aria-label="User ID">241CV218</p>
         </div>
-
-        {/* Mobile Menu Toggle Button - Only visible on mobile devices */}
-        <button 
-          className="mobile-menu-btn" 
-          onClick={toggleMobileMenu}
-          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isMobileMenuOpen}
-          aria-controls="mobile-menu"
-        >
-          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-        </button>
-
-        {/* Main Navigation Menu - Center section with menu items and search */}
-        <div 
-          className={`navbar-center ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}
-          id="mobile-menu"
-          role="navigation"
-          aria-label="Main navigation"
-        >
-          <ul className="navbar-menu" role="menubar">
-            <li role="menuitem" tabIndex={0} onKeyDown={handleKeyDown}>
-              <img src={img} alt="Institute icon" className="avatar-img" />
-              Institute ▾
-            </li>
-            <li role="menuitem" tabIndex={0} onKeyDown={handleKeyDown}>
-              <img src={ed1} alt="Academics icon" className="avatar-img" />
-              Academics ▾
-            </li>
-            <li role="menuitem" tabIndex={0} onKeyDown={handleKeyDown}>
-              <img src={bul} alt="Campus icon" className="avatar-img" />
-              Campus ▾
-            </li>
-            <li role="menuitem" tabIndex={0} onKeyDown={handleKeyDown}>
-              <img src={ear} alt="Alumni icon" className="avatar-img" />
-              Alumni ▾
-            </li>
-            <form className="search-box" role="search" onSubmit={handleSearchSubmit}>
-              <input 
-                type="text" 
-                placeholder="Search..." 
-                aria-label="Search"
-                role="searchbox"
-                value={searchQuery}
-                onChange={handleSearchChange}
-                maxLength={100}
-              />
-              <button type="submit" aria-label="Submit search">
-                <FaSearch className="search-icon" aria-hidden="true" />
-              </button>
-            </form>
-          </ul>
-        </div>
-
-        {/* Right User Info */}
-        <div className="user-section" role="region" aria-label="User information">
-          <div className="user-info">
-            <p className="user-name" aria-label="User name">Shailesh</p>
-            <p className="user-id" aria-label="User ID">241CV218</p>
-          </div>
-          <div className="user-avatar" role="img" aria-label="User avatar">
-            <img src={userImage} alt="Shailesh's profile picture" className="avatar-img" />
-          </div>
+        <div className="user-avatar" role="img" aria-label="User avatar">
+          <img src={userImage} alt="Shailesh's profile picture" className="avatar-img" />
         </div>
       </div>
     </nav>

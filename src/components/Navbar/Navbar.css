@@ -12,24 +12,16 @@
 
 /* ========== Navbar Base ========== */
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: var(--navbar-bg);
   color: var(--navbar-text);
+  padding: 8px 20px;
   font-family: "Poppins", sans-serif;
   position: relative;
   box-shadow: var(--navbar-shadow);
   backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: center;
-  padding: 8px 0;
-}
-
-/* ========== Navbar Container ========== */
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 800px;
-  padding: 0 20px;
 }
 
 /* ========== Logo Section ========== */
@@ -49,7 +41,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 30px; /* uniform space between menu items */
+  gap: 50px; /* space between menu items */
   margin: 0;
   padding: 0;
 }
@@ -79,7 +71,7 @@
   background: linear-gradient(135deg, #2a2a2a 0%, #333 100%);
   border-radius: 12px;
   padding: 6px 12px;
-  margin-left: 30px; /* uniform gap from Alumni */
+  margin-left: 80px; /* ✅ small gap from Alumni */
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
@@ -154,17 +146,12 @@
 
 /* Tablet and Medium Desktop (below 1337px) */
 @media (max-width: 1337px) {
-  .navbar-container {
-    width: 100%;
-    padding: 0 20px;
-  }
-  
   .navbar-center ul {
-    gap: 20px; /* Reduce gap between menu items */
+    gap: 0px; /* Reduce gap between menu items */
   }
   
   .search-box {
-    margin-left: 20px; /* Reduce margin from Alumni */
+    margin-left: 40px; /* Reduce margin from Alumni */
   }
   
   .search-box input {
@@ -193,11 +180,6 @@
 
 /* Mobile and Small Tablet (below 768px) */
 @media (max-width: 768px) {
-  .navbar-container {
-    width: 100%;
-    padding: 0 15px;
-  }
-  
   .mobile-menu-btn {
     display: block;
   }
@@ -256,8 +238,8 @@
 
 /* Small Mobile (below 480px) */
 @media (max-width: 480px) {
-  .navbar-container {
-    padding: 0 10px;
+  .navbar {
+    padding: 8px 15px;
   }
   
   .logo {
@@ -280,8 +262,8 @@
 
 /* Extra small devices (below 360px) */
 @media (max-width: 360px) {
-  .navbar-container {
-    padding: 0 8px;
+  .navbar {
+    padding: 6px 10px;
   }
   
   .logo {
