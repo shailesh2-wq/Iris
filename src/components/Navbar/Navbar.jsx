@@ -60,22 +60,22 @@ const Navbar = () => {
         aria-label="Main navigation"
       >
         <ul className="navbar-menu" role="menubar">
-          <li role="menuitem" tabIndex="0">
+          <li role="menuitem" tabIndex={0}>
             <img src={img} alt="Institute icon" className="avatar-img" />
             Institute ▾
           </li>
-          <li role="menuitem" tabIndex="0">
+          <li role="menuitem" tabIndex={0}>
             <img src={ed1} alt="Academics icon" className="avatar-img" />
             Academics ▾
           </li>
-          <li role="menuitem" tabIndex="0">
+          <li role="menuitem" tabIndex={0}>
             <img src={bul} alt="Campus icon" className="avatar-img" />
             Campus ▾
           </li>
-          <li role="menuitem" tabIndex="0">
+          <li role="menuitem" tabIndex={0}>
             <img src={ear} alt="Alumni icon" className="avatar-img" />
             Alumni ▾
-          </li> 
+          </li>
           <div className="search-box" role="search">
             <input 
               type="text" 
@@ -95,7 +95,7 @@ const Navbar = () => {
           <p className="user-id" aria-label="User ID">241CV218</p>
         </div>
         <div className="user-avatar" role="img" aria-label="User avatar">
-         <img src={userImage} alt="Shailesh's profile picture" className="avatar-img" />
+          <img src={userImage} alt="Shailesh's profile picture" className="avatar-img" />
         </div>
       </div>
     </nav>

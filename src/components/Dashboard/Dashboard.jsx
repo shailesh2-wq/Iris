@@ -88,31 +88,31 @@ export default function Dashboard() {
       </aside>
 
       <main className="main-content">
-       <section className="top-cards" aria-label="Academic statistics">
-  <div className="card card-inline" role="region" aria-label="Major credits">
-    <img src={edu} alt="Education icon" className="card-img" />
-    <div className="card-text">
-      <h3>44</h3>
-      <p>Major Credits</p>
-    </div>
-  </div>
+        <section className="top-cards" aria-label="Academic statistics">
+          <div className="card card-inline" role="region" aria-label="Major credits">
+            <img src={edu} alt="Education icon" className="card-img" />
+            <div className="card-text">
+              <h3>44</h3>
+              <p>Major Credits</p>
+            </div>
+          </div>
 
-  <div className="card card-inline" role="region" aria-label="Major CGPA">
-    <img src={maj} alt="Major icon" className="card-img" />
-    <div className="card-text">
-      <h3>8.1</h3>
-      <p>Major CGPA</p>
-    </div>
-  </div>
+          <div className="card card-inline" role="region" aria-label="Major CGPA">
+            <img src={maj} alt="Major icon" className="card-img" />
+            <div className="card-text">
+              <h3>8.1</h3>
+              <p>Major CGPA</p>
+            </div>
+          </div>
 
-  <div className="card card-inline" role="region" aria-label="Current semester">
-    <img src={sem} alt="Semester icon" className="card-img" />
-    <div className="card-text">
-      <h3>3<sup>rd</sup></h3>
-      <p>Semester</p>
-    </div>
-  </div>
-</section>
+          <div className="card card-inline" role="region" aria-label="Current semester">
+            <img src={sem} alt="Semester icon" className="card-img" />
+            <div className="card-text">
+              <h3>3<sup>rd</sup></h3>
+              <p>Semester</p>
+            </div>
+          </div>
+        </section>
         <div className="middle-section">
           {/* Announcements */}
           <div className="announcements box">
