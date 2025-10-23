@@ -214,28 +214,10 @@ npm run lint
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👥 Module Designers
 
-- **Akshay Revankar**
-- **Govind Jeevan**
 
-## 📞 Support
 
-For support and inquiries, contact:
-- **Email**: officers@iris.nitk.ac.in
-- **Website**: [NITK Website](https://www.nitk.ac.in)
-
-## 🙏 Acknowledgments
-
-- NITK (National Institute of Technology Karnataka)
-- React and Vite communities
-- Font Awesome for icons
-- Google Fonts for typography
 
 ---
-
-**Built with ❤️ for NITK students**
