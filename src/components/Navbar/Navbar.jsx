@@ -25,6 +25,7 @@ import ear from "../../assets/assests/world.png";
 const Navbar = () => {
   // State for managing mobile menu visibility
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   /**
    * Toggles the mobile menu visibility
@@ -32,6 +33,30 @@ const Navbar = () => {
    */
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  /**
+   * Handles search input changes with validation
+   * @param {Event} event - The input change event
+   */
+  const handleSearchChange = (event) => {
+    const value = event.target.value;
+    // Basic validation: limit search query length
+    if (value.length <= 100) {
+      setSearchQuery(value);
+    }
+  };
+
+  /**
+   * Handles search form submission
+   * @param {Event} event - The form submit event
+   */
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    if (searchQuery.trim()) {
+      // In a real app, this would trigger a search API call
+      console.log("Searching for:", searchQuery);
+    }
   };
 
   return (
@@ -76,15 +101,20 @@ const Navbar = () => {
             <img src={ear} alt="Alumni icon" className="avatar-img" />
             Alumni ▾
           </li>
-          <div className="search-box" role="search">
+          <form className="search-box" role="search" onSubmit={handleSearchSubmit}>
             <input 
               type="text" 
               placeholder="Search..." 
               aria-label="Search"
               role="searchbox"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              maxLength={100}
             />
-            <FaSearch className="search-icon" aria-hidden="true" />
-          </div>
+            <button type="submit" aria-label="Submit search">
+              <FaSearch className="search-icon" aria-hidden="true" />
+            </button>
+          </form>
         </ul>
       </div>
 

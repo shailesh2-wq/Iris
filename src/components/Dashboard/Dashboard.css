@@ -1,3 +1,44 @@
+/* ========== Error Handling ========== */
+.dashboard-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--spacing-xl);
+  text-align: center;
+  background: var(--bg);
+  color: var(--navbar-text);
+}
+
+.dashboard-error h2 {
+  color: #ff6b6b;
+  margin-bottom: var(--spacing-md);
+  font-size: 2rem;
+}
+
+.dashboard-error p {
+  color: var(--muted);
+  margin-bottom: var(--spacing-lg);
+  font-size: 1.1rem;
+}
+
+.dashboard-error button {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.dashboard-error button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
 /* ========== CSS Variables ========== */
 :root {
   /* Color Palette */

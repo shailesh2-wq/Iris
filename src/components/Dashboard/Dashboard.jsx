@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import { FaCalendarAlt, FaUserFriends, FaBell, FaCreditCard } from "react-icons/fa";
 import cal from  "../../assets/assests/calender.png";
@@ -50,14 +50,63 @@ const attendanceData = [
  * Handles the layout and rendering of all dashboard sections
  */
 export default function Dashboard() {
+  // State for error handling
+  const [hasError, setHasError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
   /**
    * Effect hook to add animation class after component mounts
    * This triggers CSS transitions for progress bars and other animated elements
    */
   useEffect(() => {
-    const el = document.querySelector(".main-content");
-    if (el) el.classList.add("loaded");
+    try {
+      const el = document.querySelector(".main-content");
+      if (el) {
+        el.classList.add("loaded");
+      }
+    } catch (error) {
+      console.error("Error adding animation class:", error);
+      setHasError(true);
+      setErrorMessage("Failed to initialize dashboard animations");
+    }
   }, []);
+
+  /**
+   * Validates attendance data
+   * @param {Array} data - Attendance data array
+   * @returns {boolean} - Whether data is valid
+   */
+  const validateAttendanceData = (data) => {
+    if (!Array.isArray(data)) return false;
+    return data.every(item => 
+      item && 
+      typeof item.title === 'string' && 
+      typeof item.pct === 'number' && 
+      item.pct >= 0 && 
+      item.pct <= 100 &&
+      typeof item.color === 'string'
+    );
+  };
+
+  // Validate attendance data
+  if (!validateAttendanceData(attendanceData)) {
+    console.error("Invalid attendance data structure");
+    setHasError(true);
+    setErrorMessage("Invalid attendance data");
+  }
+
+  // Error boundary fallback
+  if (hasError) {
+    return (
+      <div className="dashboard-error" role="alert" aria-live="polite">
+        <h2>Something went wrong</h2>
+        <p>{errorMessage}</p>
+        <button onClick={() => window.location.reload()}>
+          Reload Page
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="dashboard" role="main" aria-label="Student dashboard">
