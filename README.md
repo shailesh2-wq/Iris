@@ -2,9 +2,16 @@
 
 A modern, responsive student portal built with React and Vite, designed for NITK students to manage their academic information, track attendance, and access campus resources.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Now-brightgreen)](https://iris-alpha-three.vercel.app)
 ![IRIS Portal](https://img.shields.io/badge/React-18.2.0-blue)
 ![Vite](https://img.shields.io/badge/Vite-5.0.0-purple)
 ![License](https://img.shields.io/badge/License-MIT-green)
+
+## 🌐 Live Demo
+
+**🔗 [View Live Application](https://iris-alpha-three.vercel.app)**
+
+Experience the IRIS Student Portal in action with all features fully functional.
 
 ## 🚀 Features
 
@@ -46,6 +53,16 @@ A modern, responsive student portal built with React and Vite, designed for NITK
 - **Styling**: CSS3 with Custom Properties
 - **Icons**: React Icons (Font Awesome)
 - **Development**: ESLint for code quality
+
+## 🤖 Development Tools
+
+This project was developed using cutting-edge AI-powered development tools:
+
+- **🤖 ChatGPT**: Used for code generation, debugging assistance, and architectural guidance
+- **⚡ Cursor**: AI-powered code editor for enhanced development experience and intelligent code completion
+- **🔧 AI-Assisted Development**: Leveraged AI tools for rapid prototyping, code optimization, and best practices implementation
+
+These tools significantly accelerated the development process while maintaining high code quality and following industry best practices.
 
 ## 📦 Installation
 
