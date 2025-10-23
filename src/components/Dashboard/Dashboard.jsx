@@ -53,6 +53,10 @@ export default function Dashboard() {
   // State for error handling
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  
+  // State for UX enhancements
+  const [isLoading, setIsLoading] = useState(true);
+  const [lastUpdated, setLastUpdated] = useState(new Date());
 
   /**
    * Effect hook to add animation class after component mounts
@@ -64,6 +68,12 @@ export default function Dashboard() {
       if (el) {
         el.classList.add("loaded");
       }
+      
+      // Simulate loading completion
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+      
     } catch (error) {
       console.error("Error adding animation class:", error);
       setHasError(true);
@@ -93,6 +103,16 @@ export default function Dashboard() {
     console.error("Invalid attendance data structure");
     setHasError(true);
     setErrorMessage("Invalid attendance data");
+  }
+
+  // Loading state
+  if (isLoading) {
+    return (
+      <div className="dashboard-loading" role="status" aria-live="polite">
+        <div className="loading-spinner"></div>
+        <p>Loading your dashboard...</p>
+      </div>
+    );
   }
 
   // Error boundary fallback

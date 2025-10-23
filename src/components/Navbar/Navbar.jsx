@@ -56,6 +56,20 @@ const Navbar = () => {
     if (searchQuery.trim()) {
       // In a real app, this would trigger a search API call
       console.log("Searching for:", searchQuery);
+      // Clear search after submission
+      setSearchQuery("");
+    }
+  };
+
+  /**
+   * Handles keyboard navigation for menu items
+   * @param {Event} event - The keyboard event
+   */
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      // In a real app, this would navigate to the selected menu item
+      console.log("Menu item selected:", event.target.textContent);
     }
   };
 
@@ -85,19 +99,19 @@ const Navbar = () => {
         aria-label="Main navigation"
       >
         <ul className="navbar-menu" role="menubar">
-          <li role="menuitem" tabIndex={0}>
+          <li role="menuitem" tabIndex={0} onKeyDown={handleKeyDown}>
             <img src={img} alt="Institute icon" className="avatar-img" />
             Institute ▾
           </li>
-          <li role="menuitem" tabIndex={0}>
+          <li role="menuitem" tabIndex={0} onKeyDown={handleKeyDown}>
             <img src={ed1} alt="Academics icon" className="avatar-img" />
             Academics ▾
           </li>
-          <li role="menuitem" tabIndex={0}>
+          <li role="menuitem" tabIndex={0} onKeyDown={handleKeyDown}>
             <img src={bul} alt="Campus icon" className="avatar-img" />
             Campus ▾
           </li>
-          <li role="menuitem" tabIndex={0}>
+          <li role="menuitem" tabIndex={0} onKeyDown={handleKeyDown}>
             <img src={ear} alt="Alumni icon" className="avatar-img" />
             Alumni ▾
           </li>
