@@ -6,7 +6,7 @@ A modern, responsive student portal built with React and Vite, designed for NITK
 ![Vite](https://img.shields.io/badge/Vite-5.0.0-purple)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-DEPLOYMENT LINK : iris-alpha-three.vercel.app
+
 
 ## 🚀 Features
 
