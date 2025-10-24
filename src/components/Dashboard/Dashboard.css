@@ -557,7 +557,7 @@ body {
   }
 
   .top-cards > div { 
-    width: 95%;             
+    width: 90%;             
     padding: 15px;            
     /* margin-bottom: 10px; */ /* <-- THIS IS NOW REMOVED */
     height: auto;             
@@ -573,11 +573,11 @@ body {
     align-items: center; 
   }
   
-  .announcements-box,
-  .attendance-box,
+  .announcements,
+  .attendance,
   .quick-actions,     
   .upcoming-deadlines { 
-    width: 95%; 
+    width: 90%; 
     margin: 10px auto; 
   }
 
@@ -586,7 +586,7 @@ body {
 /* Enhanced responsive design for better mobile experience */
 @media (max-width: 480px) {
   .top-cards > div {
-    width: 98%;
+    width: 92%;
     padding: 12px;
   }
   
@@ -598,11 +598,11 @@ body {
     font-size: 0.85rem;
   }
   
-  .announcements-box,
-  .attendance-box,
+  .announcements,
+  .attendance,
   .quick-actions,
   .upcoming-deadlines {
-    width: 98%;
+    width: 92%;
     padding: 15px;
   }
   
@@ -638,8 +638,8 @@ body {
     font-size: 0.8rem;
   }
   
-  .announcements-box,
-  .attendance-box,
+  .announcements,
+  .attendance,
   .quick-actions,
   .upcoming-deadlines {
     padding: 12px;
