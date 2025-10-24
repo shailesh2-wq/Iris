@@ -356,8 +356,9 @@ body {
 
 .attendance-item {
   background: var(--panel2);
-  padding: 12px 14px;
-  border-radius: 0;
+  padding: 16px 18px;
+  border-radius: 8px;
+  margin-bottom: 8px;
 }
 
 .att-title {
@@ -610,7 +611,9 @@ body {
   }
   
   .attendance-item {
-    padding: 8px 0;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 8px;
   }
   
   .att-title {
@@ -618,7 +621,7 @@ body {
   }
   
   .progress {
-    height: 6px;
+    height: 2px;
   }
 }
 

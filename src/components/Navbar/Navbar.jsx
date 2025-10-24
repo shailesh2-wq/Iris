@@ -115,22 +115,22 @@ const Navbar = () => {
             <img src={ear} alt="Alumni icon" className="avatar-img" />
             Alumni ▾
           </li>
-          <div className="search-container">
-            <input 
-              type="text" 
-              placeholder="Search..." 
-              aria-label="Search"
-              role="searchbox"
-              value={searchQuery}
-              onChange={handleSearchChange}
-              maxLength={100}
-              className="search-input"
-            />
-            <button className="search-icon-btn" aria-label="Search" onClick={handleSearchSubmit}>
-              <FaSearch className="search-icon" aria-hidden="true" />
-            </button>
-          </div>
         </ul>
+        <div className="search-container">
+          <input 
+            type="text" 
+            placeholder="Search..." 
+            aria-label="Search"
+            role="searchbox"
+            value={searchQuery}
+            onChange={handleSearchChange}
+            maxLength={100}
+            className="search-input"
+          />
+          <button className="search-icon-btn" aria-label="Search" onClick={handleSearchSubmit}>
+            <FaSearch className="search-icon" aria-hidden="true" />
+          </button>
+        </div>
       </div>
 
       {/* Right User Info */}
